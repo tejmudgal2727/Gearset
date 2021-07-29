@@ -1,5 +1,5 @@
 public class TestCI {
     public static string ParentMethod(){
-        return 'Test Integration4';
+        return 'Test Integration5';
     }
 }
