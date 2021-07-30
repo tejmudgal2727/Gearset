@@ -8,5 +8,6 @@
         <plural>true</plural>
         <value>GearSets</value>
     </caseValues>
+    
     <startsWith>Consonant</startsWith>
 </CustomObjectTranslation>
