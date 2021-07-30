@@ -1,5 +1,5 @@
 public class HelloWorld {
     public static string helloMessage() {
-        return('Hello World2');
+        return('Hello World');
      }
 }
