@@ -12,7 +12,7 @@
             </layoutItems>
             <layoutItems>
                 <behavior>Edit</behavior>
-                <field>Demo_Gearset__c</field>
+                <field>Demo__c</field>
             </layoutItems>
         </layoutColumns>
         <layoutColumns>
