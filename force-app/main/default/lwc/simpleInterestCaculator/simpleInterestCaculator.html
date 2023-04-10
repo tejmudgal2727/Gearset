@@ -1,0 +1,15 @@
+<template>
+    <lightning-card title="Simple Interest Calculator" icon-name="custom:einstein">
+        <!-- <div class = "slds-grid slds-gutters"> -->
+            <lightning-input label="Enter Amount" value={amount} onchange={handleChange} name="amt"></lightning-input>
+            <lightning-input label="Enter Term of investment" value={year} onchange={handleChange} name="years"></lightning-input>
+            <lightning-input label="Enter Rate of interest" value={interestRate} onchange={handleChange} name="interest"></lightning-input>
+            <lightning-input label="The Interest Accumated" value={interestCost} readonly></lightning-input>
+
+            <lightning-button-group>
+                <lightning-button label="Calculate" onclick={calculateInterest}></lightning-button>
+                <lightning-button label="Clear" onclick={clearData}></lightning-button>
+            </lightning-button-group>
+        <!-- </div> -->
+    </lightning-card>
+</template>

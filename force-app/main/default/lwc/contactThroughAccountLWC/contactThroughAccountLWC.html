@@ -1,0 +1,22 @@
+<template>
+    <lightning-quick-action-panel header="New Contact">
+        <!-- <lightning-spinner alternative-text="Loading" size="xx-small"></lightning-spinner> -->
+
+        <lightning-record-edit-form object-api-name={objectApiName} onsuccess={handleSuccess} onsubmit={handleSubmit} density="comfy">
+            
+            <lightning-input-field field-name={contactName} name="contName" value={cName} onchange={handleChange}></lightning-input-field>
+            <lightning-input-field field-name={contactEmail} name="contEmail" value={cEmail} onchange={handleChange}></lightning-input-field>
+            <lightning-input-field field-name={contactPhone} name="contPhone" value={cPhone} onchange={handleChange}></lightning-input-field>
+            <lightning-input-field field-name={contactAccountName} value={recordId} disabled></lightning-input-field> 
+            <lightning-input-field field-name={contactTitle} name="contTitle" value={cTitle} onchange={handleChange}></lightning-input-field>
+            
+            <footer>
+                <div class="slds-modal__footer">
+                    <lightning-button label="Cancel" variant="brand" class="slds-m-left_x-small" onclick={handleCancel}></lightning-button>
+                    <lightning-button label="Save" variant="brand" class="slds-m-left_x-small" type="submit"></lightning-button>
+                </div>
+            </footer>
+
+        </lightning-record-edit-form>
+    </lightning-quick-action-panel>
+</template>
