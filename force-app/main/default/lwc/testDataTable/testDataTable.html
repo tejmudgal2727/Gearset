@@ -1,0 +1,41 @@
+<template>
+    <template if:true={isLoading}>
+        <lightning-spinner variant="brand" size="large"> </lightning-spinner>
+    </template>
+    <!-- <lightning-accordion allow-multiple-sections-open="true" active-section-name={activeSections}> -->
+        <!-- Contact Summary -->
+        <!-- <lightning-accordion-section name="Contact_Summary" label="Contact Summary" class="slds-m-vertical_x-small"> -->
+            <div class="slds-scrollable_x">
+                <div class={CSTableFixHead}>
+                    <table class="slds-table slds-table_bordered slds-table_col-bordered slds-table_cell-buffer">
+                        <thead>
+                            <tr>
+                                <template for:each={paymentEstimateColumn} for:item="column" for:index="index">
+                                    <th key={column.label}>{column.label}</th>
+                                </template>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <template for:each={paymentEstimate} for:item="payment" for:index="index">
+                                <tr key={payment.Id}>
+                                    <td>
+                                        <a onclick={handleClick} data-id={payment.Id}>{payment.Payment_Estimate_Name__c}</a>
+                                    </td>
+                                    <td>{payment.Estimated_Revenue__c}</td>
+                                    <td>{payment.Estimate__c} <span class="slds-hide slds-show_inline-block pencil-icon"></span></td>
+                                    <td>{payment.Amount__c}</td>
+                                    <td>{payment.Payment_DateR__c}</td>
+                                    <td>{payment.Payment_Date__c}</td>
+                                </tr>
+                            </template>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <div if:false={paymentEstimate.length}
+                class="slds-text-align_center slds-text-heading_small slds-m-vertical_x-small">There are no
+                payment estimates to display.
+            </div>
+        <!-- </lightning-accordion-section> -->
+    <!-- </lightning-accordion> -->
+</template>
