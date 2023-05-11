@@ -1,0 +1,30 @@
+<template>
+    <lightning-card>
+        <legend class="slds-form-element__legend slds-form-element__label">Total Amount</legend>
+        <lightning-input  style="width: 235px !important;" variant="label-hidden" value={totalOppAmount}  disabled></lightning-input><br>
+
+        <template if:true={isVisibleSingningAmount}>
+            <legend class="slds-form-element__legend slds-form-element__label">Signing Up Amount</legend>
+            <lightning-input  style="width: 235px !important;" variant="label-hidden" value={singningAmount}  disabled></lightning-input><br>
+        </template>
+        
+        <lightning-datatable key-field="Id" 
+                             data={dataValue} 
+                             columns={column}
+                             draft-values={saveDraftValues}
+                             hide-checkbox-column="true"
+                             onsave={handleSave}>
+        </lightning-datatable> 
+
+       
+        <lightning-datatable key-field="Id" 
+                             data={totalData} 
+                             columns={totColumn}
+                             hide-checkbox-column = "true"
+                             hide-row-number-column
+                             hide-table-header>
+        </lightning-datatable> 
+        
+        <!-- <lightning-input  style="width: 155px !important;" label="Total Estimate" disabled></lightning-input><br> -->
+    </lightning-card>
+</template>
